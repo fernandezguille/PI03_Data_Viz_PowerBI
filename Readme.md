@@ -39,19 +39,19 @@ La industria de las telecomunicaciones ha jugado un papel vital en nuestra socie
 ### Archivos del repositorio
 - [**Conexiones_a_internet_en_Argentina.csv**:](./Conexiones_a_internet_en_Argentina.csv/) Archivo CSV producto de la fusión de los datasets.  
 - [**Dashboard_conectividad_a_internet.pbix**:](./Dashboard_conectividad_a_internet.pbix/) Dashboard que muestra el análisis de la información.  
-- [**EDA.ipynb**:](./EDA.ipynb) Notebook de jupyter donde se realiza toda la carga y transformación de datos.
+- [**EDA.ipynb**:](./EDA.ipynb) Notebook de jupyter donde se realiza toda la carga y transformación de datos, así como la justificación de los datos escogidos para la realización del dashboard.
 
 ## Extraer los datos desde la API _(plus)_
 Mediante el uso de la API del sitio web https://datosabiertos.enacom.gob.ar/ se obtuvo un dataset que incluye toda la información disponible del sitio, para revisar cuáles se utilizarán.
 
 ## EDA <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width=40px height=40px/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" width=40px height=40px/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width=40px height=40px/>   
-Se exploraron los 18 datasets obtenidos anteriormente, para detectar features relevantes. Se seleccionaron aquellos que estaban segregados por provincia, por ser los que mayor información aportaban.
+Se exploraron los 18 datasets obtenidos anteriormente, para detectar features relevantes. Se seleccionaron aquellos que estaban segregados por provincia, por ser los que mayor información aportaban, y de los cuáles se podrían obtener KPIs significativos.
 
 ## ETL
 Algunos de los datasets tenían tipos de datos incorrectos, caracteres dentro de campos numéricos, etc. Se revisaron los campos de los datasets y se aplicaron correcciones.
 
 ## Unir datasets, y exportar CSV a PowerBI
-Con los datasets limpios, se realizó el merge, y se quitaron columnas totalizadoras. Luego, se exportó el DF a un CSV para su consumo en PowerBI, revisando que la configuración regional tome bien los decimales. También se modificó el año para que fuera de tipo Date.
+Con los datasets limpios, se realizó el merge, y se quitaron columnas totalizadoras. Luego, se exportó el DF a un CSV para su consumo en PowerBI, revisando que la configuración regional compute bien los decimales. También se modificó el año para que fuera de tipo Date.
 
 ## Establecer KPIs
 + Variación porcentual trimestral de los accesos al servicio de internet cada 100 hogares, por provincia.
@@ -66,7 +66,7 @@ Se utilizaron scripts para realizar la carga del CSV y para elaborar una columna
 Se estrableció un Dashboard con un tema oscuro y visualizaciones para facilitar el entendimiento los KPIs.
 
 ## Redactar un reporte escrito _(plus)_
-El reporte escrito del proyecto se realizará posteriormente a la entrega del PI, para que cualquiera pueda entender el flujo de lectura del Dashboard.
+El reporte se puede encontrar en el archivo EDA.ipynb, que fue realizado explicando los pasos, estableciendo conclusiones y explicando cómo se llegó a ellas.
 <hr>
 
 ## Conclusión
